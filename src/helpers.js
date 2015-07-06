@@ -554,6 +554,8 @@ function prepArticle(articleContent) {
   /* Clean out junk from the article content */
   clean(articleContent, 'form');
   clean(articleContent, 'object');
+  clean(articleContent, 'link');
+  clean(articleContent, 'script');
   if (articleContent.getElementsByTagName('h1').length === 1) {
     clean(articleContent, 'h1');
   }
